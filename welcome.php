@@ -1,24 +1,31 @@
 <!DOCTYPE HTML>
 <html lang="en">  
- <head>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="test2.css">
     <title>PHP Test 1</title>
     <link rel="stylesheet" href="css/stylec.css">
   </head>
-<body>
-
-
-  <form action="register.php" method="post">
-    First Name: <input type="text" name="fname"><br>
-    Last Name: <input type="text" name="lname"><br>
-    E-mail: <input type="text" name="email"><br>
-    <input type="submit">
-  </form>
-
-</body>
+  <body>
+    <h1>Sign up for free grades!</h1>
+      <?php
+        if(!isset($_COOKIE["name"]))
+        { 
+      ?>
+      <form action="register.php" method="post">
+        <label for ="t1">First Name:</label>
+        <input type="text" name="fname" id="t1"><br>
+        <label for="t2">Last Name:</label>
+        <input type="text" name="lname" id="t2"><br>
+        <label for ="t3">Email:</label>
+        <input type="text" name="email" id="t3"><br>
+        <input type="submit">
+      </form>
+      <?php 
+        }else{
+          echo "HI, ".$_COOKIE["name"] . " ,you recently signed up with the email address: ". $_COOKIE["email"] . " ,thank you!";
+        }
+      ?>
+  </body>
 </html>
 

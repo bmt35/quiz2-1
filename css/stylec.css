@@ -5,13 +5,16 @@ body, html {
   font-family: 'Lato', 'sans-serif';
 }
 
-
 input[type=text] { 
-  background-color: white;
+  background-color: #222222;
   width: 375px;
   display: block;
   height: 25px;
   border: 1px solid #999;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+#t1,#t2,#t3 {
+  color: #0DFF92;
 }
 
